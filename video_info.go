@@ -18,7 +18,7 @@ import (
 	"github.com/rs/zerolog/log"
 )
 
-const youtubeBaseURL = "https://www.youtube.com/watch"
+const youtubeBaseURL = "https://www.youtube.com/embed/"
 const youtubeEmbeddedBaseURL = "https://www.youtube.com/embed/"
 const youtubeVideoEURL = "https://youtube.googleapis.com/v/"
 const youtubeVideoInfoURL = "https://www.youtube.com/get_video_info"
@@ -91,7 +91,7 @@ func extractVideoID(u *url.URL) string {
 
 // GetVideoInfoFromID fetches video info from a youtube video id
 func (c *Client) GetVideoInfoFromID(cx context.Context, id string) (*VideoInfo, error) {
-	body, err := c.httpGetAndCheckResponseReadBody(cx, youtubeBaseURL+"?v="+id)
+	body, err := c.httpGetAndCheckResponseReadBody(cx, youtubeBaseURL+id)
 
 	if err != nil {
 		return nil, err
