@@ -249,7 +249,9 @@ func (c *Client) getVideoInfoFromHTML(cx context.Context, id string, html []byte
 		log.Debug().Msg("Unable to extract player response JSON")
 	}
 
-	//info.htmlPlayerFile = jsonConfig.Assets.JS
+	if info.htmlPlayerFile == "" {
+		info.htmlPlayerFile = jsonConfig.Assets.JS
+	}
 
 	if len(formats) == 0 {
 		log.Debug().Msgf("No formats found")
