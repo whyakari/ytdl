@@ -16,7 +16,7 @@ import (
 	"github.com/rs/zerolog/log"
 	"github.com/urfave/cli/v2"
 
-	"github.com/rylio/ytdl"
+	"github.com/Andreychik32/ytdl"
 )
 
 var (

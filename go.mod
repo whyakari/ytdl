@@ -7,7 +7,6 @@ require (
 	github.com/mattn/go-isatty v0.0.12
 	github.com/olekukonko/tablewriter v0.0.4
 	github.com/rs/zerolog v1.19.0
-	github.com/rylio/ytdl v0.6.3
 	github.com/stretchr/testify v1.6.1
 	github.com/urfave/cli/v2 v2.2.0
 )

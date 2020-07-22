@@ -17,7 +17,7 @@ import (
 	"context"
 	"os"
 
-	"github.com/rylio/ytdl"
+	"github.com/Andreychik32/ytdl"
 )
 
 func main() {
